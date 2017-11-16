@@ -24,11 +24,12 @@ namespace Task2_extension
             catch (Exception ex)
             {
                 var errorMessage = ex.Message;
-                    //+ Environment.NewLine + Environment.NewLine
-                                   //+ ex.StackTrace + Environment.NewLine + Environment.NewLine
-                                   //+ ex.Source + Environment.NewLine
-                                   //+ ex.Data;
-                MessageBox.Show(errorMessage, "Error", MessageBoxButtons.OK);
+                //+ Environment.NewLine + Environment.NewLine
+                //+ ex.StackTrace + Environment.NewLine + Environment.NewLine
+                //+ ex.Source + Environment.NewLine
+                //+ ex.Data;
+                //Fixed: +MessageBoxIcon.Error
+                MessageBox.Show(errorMessage, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             richTextBox_output.Text = _inputDate.DateTimeToWords();
         }
